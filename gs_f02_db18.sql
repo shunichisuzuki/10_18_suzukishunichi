@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2019 年 2 朁E25 日 16:23
+-- Generation Time: 2019 年 3 朁E04 日 22:41
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -32,16 +32,16 @@ CREATE TABLE IF NOT EXISTS `gs_bm_table` (
   `url` text NOT NULL,
   `comment` text NOT NULL,
   `indate` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=248 DEFAULT CHARSET=utf8;
 
 --
 -- テーブルのデータのダンプ `gs_bm_table`
 --
 
 INSERT INTO `gs_bm_table` (`id`, `name`, `url`, `comment`, `indate`) VALUES
-(92, '星と神話物語で親しむ星の世界', 'http://books.google.co.jp/books?id=6ZRmLwEACAAJ&dq=%E6%98%9F%E3%81%A8%E7%A5%9E%E8%A9%B1%E7%89%A9%E8%AA%9E%E3%81%A7%E8%A6%AA%E3%81%97%EF%BF%BD_%E6%98%9F%E3%81%AE%E4%B8%96%E7%95%8C&hl=&source=gbs_api', 'test1で登録。', '2019-02-26 00:14:39'),
-(93, '星と神話物語で親しむ星の世界', 'http://books.google.co.jp/books?id=6ZRmLwEACAAJ&dq=%E6%98%9F%E3%81%A8%E7%A5%9E%E8%A9%B1%E7%89%A9%E8%AA%9E%E3%81%A7%E8%A6%AA%E3%81%97%EF%BF%BD_%E6%98%9F%E3%81%AE%E4%B8%96%E7%95%8C&hl=&source=gbs_api', 'aaa', '2019-02-24 00:59:15'),
-(94, '星座の図鑑:星座の探し方と神話がわかる', 'http://books.google.co.jp/books?id=LSa0tAEACAAJ&dq=%E6%98%9F%E5%BA%A7%E3%81%AE%E5%9B%B3%E9%91%91:%E6%98%9F%E5%BA%A7%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E7%A5%9E%E8%A9%B1%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B&hl=&source=gbs_api', 'bbb', '2019-02-24 01:00:46');
+(244, '星と神話物語で親しむ星の世界', 'http://books.google.co.jp/books?id=6ZRmLwEACAAJ&dq=%E6%98%9F%E3%81%A8%E7%A5%9E%E8%A9%B1%E7%89%A9%E8%AA%9E%E3%81%A7%E8%A6%AA%E3%81%97%EF%BF%BD_%E6%98%9F%E3%81%AE%E4%B8%96%E7%95%8C&hl=&source=gbs_api', 'test1で登録。', '2019-02-26 00:14:39'),
+(245, '星と神話物語で親しむ星の世界', 'http://books.google.co.jp/books?id=6ZRmLwEACAAJ&dq=%E6%98%9F%E3%81%A8%E7%A5%9E%E8%A9%B1%E7%89%A9%E8%AA%9E%E3%81%A7%E8%A6%AA%E3%81%97%EF%BF%BD_%E6%98%9F%E3%81%AE%E4%B8%96%E7%95%8C&hl=&source=gbs_api', 'aaa', '2019-02-24 00:59:15'),
+(246, '星座の図鑑:星座の探し方と神話がわかる', 'http://books.google.co.jp/books?id=LSa0tAEACAAJ&dq=%E6%98%9F%E5%BA%A7%E3%81%AE%E5%9B%B3%E9%91%91:%E6%98%9F%E5%BA%A7%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E7%A5%9E%E8%A9%B1%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B&hl=&source=gbs_api', 'bbb', '2019-02-24 01:00:46');
 
 -- --------------------------------------------------------
 
@@ -111,15 +111,22 @@ CREATE TABLE IF NOT EXISTS `php02_table` (
   `task` varchar(128) NOT NULL,
   `deadline` date NOT NULL,
   `comment` text,
+  `image` varchar(128) DEFAULT NULL,
   `indate` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- テーブルのデータのダンプ `php02_table`
 --
 
-INSERT INTO `php02_table` (`id`, `task`, `deadline`, `comment`, `indate`) VALUES
-(2, 'Task名2', '2019-02-23', 'Task名2のコメント', '2019-02-09 14:51:38');
+INSERT INTO `php02_table` (`id`, `task`, `deadline`, `comment`, `image`, `indate`) VALUES
+(2, 'Task名2', '2019-02-23', 'Task名2のコメント', NULL, '2019-02-09 14:51:38'),
+(3, 'test1', '2019-03-09', 'aaa', 'upload/20190302075657d41d8cd98f00b204e9800998ecf8427e.png', '2019-03-02 15:56:57'),
+(4, 'test10', '2019-03-16', 'aaa', NULL, '2019-03-02 17:33:26'),
+(5, '検証', '2019-03-08', 'あああ', NULL, '2019-03-02 18:00:42'),
+(6, '検証2', '2019-03-09', 'a', NULL, '2019-03-03 00:28:09'),
+(7, '検証3', '2019-03-06', 'ccc', NULL, '2019-03-03 00:33:21'),
+(8, '検証３', '2019-03-07', 'あ', NULL, '2019-03-03 00:44:20');
 
 -- --------------------------------------------------------
 
@@ -193,7 +200,7 @@ ALTER TABLE `user_table`
 -- AUTO_INCREMENT for table `gs_bm_table`
 --
 ALTER TABLE `gs_bm_table`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=96;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=248;
 --
 -- AUTO_INCREMENT for table `gs_bm_table_test0`
 --
@@ -213,7 +220,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `php02_table`
 --
 ALTER TABLE `php02_table`
-MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `user_table`
 --
